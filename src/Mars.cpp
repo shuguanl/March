@@ -2,9 +2,13 @@
 
 void Ball::Fetch()
 {
-	return 1;
+	return;
 }
 void Ball::Kick()
 {
+	return;
 }
 
+int Ball::Roll()
+{
+}
