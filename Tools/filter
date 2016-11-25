@@ -1,0 +1,2 @@
+awk '/^2000/{printf $1; for(i=12;i<22;i++) {printf "%s\t", $i*1000}printf $NF "\n"}' Result.txt
+
