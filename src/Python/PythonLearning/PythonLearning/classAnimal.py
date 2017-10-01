@@ -1,3 +1,8 @@
+""" 
+THis is an example
+
+__doc__ could be defined in this section
+"""
 class classAnimal(object):
     """description of class"""
     def __init__(self, weight) :
@@ -7,7 +12,7 @@ class classAnimal(object):
         return classAnimal(self.weight + other.weight)
 
     def __str__(self):
-        return 'Animal (%d)' %self.weight
+        return 'Animal (%d)'%self.weight
 
     def Name(self) :
         print("Hello")
