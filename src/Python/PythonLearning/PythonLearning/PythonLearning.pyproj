@@ -6,7 +6,7 @@
     <ProjectGuid>78c52fbf-d119-42e9-9a4d-327a980f4e42</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{D22814C2-A430-4A53-8052-A3A64BFB2240};{888888A0-9F3D-457C-B088-3A5042F75D52}</ProjectTypeGuids>
-    <StartupFile>PythonLearning.py</StartupFile>
+    <StartupFile>svdforarticle.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -27,7 +27,13 @@
     <Compile Include="classAnimal.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="cowindows.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonLearning.py" />
+    <Compile Include="svdforarticle.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TupleL.py">
       <SubType>Code</SubType>
     </Compile>
