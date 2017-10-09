@@ -1,3 +1,6 @@
+/* 
+ * add some comments*
+ */
 class Ball
 {
 publc:
