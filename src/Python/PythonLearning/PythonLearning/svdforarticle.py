@@ -57,7 +57,7 @@ plt.ylim([-1, 1])
 
 for i in range(len(WordDict)) :
     print("[{0:.2f}, {1:.2f}]{2}".format(U[i,0], U[i,1], InvertWordDict[i]))
-    plt.text(U[i, 1], U[i, 2], InvertWordDict[i])
+    plt.text(U[i, 0], U[i, 1], InvertWordDict[i])
 plt.show()
 
 '''
