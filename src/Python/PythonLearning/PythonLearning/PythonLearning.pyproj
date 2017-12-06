@@ -30,6 +30,9 @@
     <Compile Include="cowindows.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="numpynn.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PythonLearning.py" />
     <Compile Include="svdforarticle.py">
       <SubType>Code</SubType>
