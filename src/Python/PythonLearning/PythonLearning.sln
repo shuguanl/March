@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonLearning", "PythonLearning\PythonLearning.pyproj", "{78C52FBF-D119-42E9-9A4D-327A980F4E42}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Loop", "Loop\Loop.pyproj", "{0D91FA7A-F521-4F65-9ABA-D50AD023420D}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Pytorch", "Pytorch\Pytorch.pyproj", "{55529126-904C-4E7D-8398-0FF6D7C19B08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +17,15 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78C52FBF-D119-42E9-9A4D-327A980F4E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78C52FBF-D119-42E9-9A4D-327A980F4E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D91FA7A-F521-4F65-9ABA-D50AD023420D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D91FA7A-F521-4F65-9ABA-D50AD023420D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55529126-904C-4E7D-8398-0FF6D7C19B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55529126-904C-4E7D-8398-0FF6D7C19B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0CCBF5EE-C48D-4588-AF0B-1862F76CA10C}
 	EndGlobalSection
 EndGlobal
