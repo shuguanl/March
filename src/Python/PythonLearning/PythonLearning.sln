@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonLearning", "PythonLearning\PythonLearning.pyproj", "{78C52FBF-D119-42E9-9A4D-327A980F4E42}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TorchImage", "TorchImage\TorchImage.pyproj", "{A74CD203-E92F-4BCF-B77A-1630A9234915}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,8 +15,13 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{78C52FBF-D119-42E9-9A4D-327A980F4E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{78C52FBF-D119-42E9-9A4D-327A980F4E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74CD203-E92F-4BCF-B77A-1630A9234915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74CD203-E92F-4BCF-B77A-1630A9234915}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02632A80-4994-4030-85B2-E54A8777CBE0}
 	EndGlobalSection
 EndGlobal
