@@ -32,7 +32,7 @@ data_transforms = {
     ]),
 }
 
-data_dir = 'hymenoptera_data'
+data_dir = '/home/core/gitroot/March/src/Python/PythonLearning/TorchImage/hymenoptera_data'
 image_datasets = {x: datasets.ImageFolder(os.path.join(data_dir, x), 
                                           data_transforms[x]) 
                  for x in ['train', 'val']}
@@ -50,7 +50,15 @@ use_gpu = torch.cuda.is_available()
 
 def imshow(inp, title=None) :
     """Imshow for Tensor."""
-    inp.numpy().transpose((1, 2, 0))
+    inp = inp.numpy().transpose((1, 2, 0))
+    mean = np.array([0.485, 0.456, 0.406])
+    std = np.array([0.229, 0.224, 0.225])
+    inp = std * inp + mean
+    inp = np.clip(inp, 0, 1)
+    plt.imshow(inp)
+    if title is not None:
+        plt.title(title)
+    plt.pause(0.001) 
 
 inputs, classes = next(iter(dataloaders['train']))
 
@@ -120,6 +128,6 @@ if use_gpu :
 
 criterion = nn.CrossEntropyLoss()
 optimizer_ft = optim.SGD(model_ft.parameters(), lr = 0.001, momentum = 0.9)
-exp_lr_scheduler = lr_schedulers.StepLR(optimizer_ft, step_size = 7, gamma = 0.1)
+exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size = 7, gamma = 0.1)
 
 model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs = 25)
