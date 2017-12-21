@@ -65,7 +65,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 25) :
     best_acc = 0.0
 
     for epoch in range(num_epochs) :
-        print('Epoch {}/{}}', format(epoch, num_epochs - 1))
+        print('Epoch {}/{}'.format(epoch, num_epochs - 1))
         print('-' * 10)
 
         for phase in ['train', 'val'] :
@@ -100,7 +100,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 25) :
                 optimizer.step()
 
             running_loss += loss.data[0]
-            running_corrects += torch.sum(preds = labels.data)
+            running_corrects += torch.sum(preds == labels.data)
 
         epoch_loss = running_loss / dataset_sizes[phase]
         epoch_acc = running_corrects / dataset_sizes[phase]
