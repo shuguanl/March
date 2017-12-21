@@ -1,4 +1,4 @@
-﻿from __future import print_funciton, division
+﻿from __future__ import print_function, division
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -111,7 +111,7 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 25) :
             best_acc = epoch_acc
             best_model_wts = model.state_dict()
 
-      print()
+        print()
 model_ft = models.resnet18(pretrained = True)
 num_features = model_ft.fc.in_features
 model_ft.fc = nn.Linear(num_features, 2)
