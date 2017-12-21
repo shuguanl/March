@@ -1,9 +1,18 @@
-﻿import torch
+﻿from __future import print_funciton, division
+import torch
 import torch.nn as nn
 import torch.optim as optim
 
+from torch.optim import lr_scheduler
+from touch.autograd import Variable
+
+import numpy as np
 import torchvision
+
 from torchvision import datasets, models, transforms
+
+import matplotlib.pylot as plt
+
 import os 
 import time
 
