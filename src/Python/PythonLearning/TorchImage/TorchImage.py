@@ -46,7 +46,7 @@ dataset_sizes = {x: len(image_datasets[x])
 
 class_names = image_datasets['train'].classes
 
-use_gpu = torch.cuda.is_avaliable()
+use_gpu = torch.cuda.is_available()
 
 def imshow(inp, title=None) :
     """Imshow for Tensor."""
