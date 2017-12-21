@@ -11,7 +11,7 @@ import torchvision
 
 from torchvision import datasets, models, transforms
 
-import matplotlib.pylot as plt
+import matplotlib.pyplot as plt
 
 import os 
 import time
