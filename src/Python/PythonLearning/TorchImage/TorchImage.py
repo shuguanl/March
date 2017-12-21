@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.optim as optim
 
 from torch.optim import lr_scheduler
-from touch.autograd import Variable
+from torch.autograd import Variable
 
 import numpy as np
 import torchvision
