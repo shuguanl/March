@@ -75,41 +75,41 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 25) :
             else :
                 model.train(False)
 
-        running_loss = 0.0
-        running_corrects = 0
+            running_loss = 0.0
+            running_corrects = 0
 
-        for data in dataloaders[phase] :
-            inputs, labels = data
+            for data in dataloaders[phase] :
+                inputs, labels = data
         
-            if use_gpu :
-                inputs = Variable(inputs.cuda())
-                labels = Variable(labels.cuda())
-            else :
-                inputs = Variable(inputs)
-                labels = Variable(labels)
+                if use_gpu :
+                    inputs = Variable(inputs.cuda())
+                    labels = Variable(labels.cuda())
+                else :
+                    inputs = Variable(inputs)
+                    labels = Variable(labels)
            
-            optimizer.zero_grad()
+                optimizer.zero_grad()
 
-            #forward
-            outputs = model(inputs)
-            _, preds = torch.max(outputs.data, 1)
-            loss = criterion(outputs, labels)
+                #forward
+                outputs = model(inputs)
+                _, preds = torch.max(outputs.data, 1)
+                loss = criterion(outputs, labels)
   
-            if phase == 'train' :
-                loss.backward()
-                optimizer.step()
+                if phase == 'train' :
+                    loss.backward()
+                    optimizer.step()
 
-            running_loss += loss.data[0]
-            running_corrects += torch.sum(preds == labels.data)
+                running_loss += loss.data[0]
+                running_corrects += torch.sum(preds == labels.data)
 
-        epoch_loss = running_loss / dataset_sizes[phase]
-        epoch_acc = running_corrects / dataset_sizes[phase]
+            epoch_loss = running_loss / dataset_sizes[phase]
+            epoch_acc = running_corrects / dataset_sizes[phase]
  
-        print('{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc))
+            print('{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc))
 
-        if phase == 'val' and epoch_acc > best_acc:
-            best_acc = epoch_acc
-            best_model_wts = model.state_dict()
+            if phase == 'val' and epoch_acc > best_acc:
+                best_acc = epoch_acc
+                best_model_wts = model.state_dict()
 
         print()
 model_ft = models.resnet18(pretrained = True)
