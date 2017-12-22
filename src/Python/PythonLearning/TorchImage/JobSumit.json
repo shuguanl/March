@@ -1,0 +1,10 @@
+{
+  "StartupBashScript": null,
+  "EnableBashScript": false,
+  "StartupProgram": "python",
+  "Environment": "CUDA_VISIBLE_DEVICES=2",
+  "EnableConcurrency": false,
+  "CommonParameter": null,
+  "ExtraParameter": "1 >& 2",
+  "HyperParameters": []
+}

@@ -120,6 +120,44 @@ def train_model(model, criterion, optimizer, scheduler, num_epochs = 25) :
                 best_model_wts = model.state_dict()
 
         print()
+
+    time_elapsed = time() - since
+
+    print('Training complete in {:.0f}m{:.0f}s'.format(time_elapsed//60, time_elapsed%60))
+    print('Best val ACC: {:4f}'.format(best_acc))
+
+    model.load_state_dict(best_model_wts)
+
+    return model
+
+def visualize_model(model, num_images = 6) :
+    images_so_far = 0
+    fig = plt.figure()
+    
+    for i, data in enumerate(dataloaders['val']) :
+        inputs, labels = data
+       
+        if use_gpu :
+            inputs = Variable(inputs.cuda())
+            labels = Variable(labels.cuda())
+        else :
+            inputs = Variable(inputs)
+            labels = Variable(labels)
+
+        outputs = model(inputs)
+
+        _, preds = torch.max(outputs.data, 1)
+
+        for j in range(inputs.size()[0]) :
+            images_so_far += 1
+            ax = plt.subplot(num_images //2, 2, images_so_far)
+            ax.axis('off')
+            ax.set_title()
+            imshow(inputs.cpu().data[j])
+
+            if images_so_far == num_images :
+                return
+
 model_ft = models.resnet18(pretrained = True)
 num_features = model_ft.fc.in_features
 model_ft.fc = nn.Linear(num_features, 2)
@@ -131,3 +169,5 @@ optimizer_ft = optim.SGD(model_ft.parameters(), lr = 0.001, momentum = 0.9)
 exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size = 7, gamma = 0.1)
 
 model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs = 25)
+
+visualize_model(model_ft, 10)
