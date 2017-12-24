@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "PythonLearning", "PythonLearning\PythonLearning.pyproj", "{78C52FBF-D119-42E9-9A4D-327A980F4E42}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Pytorch", "Pytorch\Pytorch.pyproj", "{55529126-904C-4E7D-8398-0FF6D7C19B08}"
 EndProject
 Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "TorchImage", "TorchImage\TorchImage.pyproj", "{A74CD203-E92F-4BCF-B77A-1630A9234915}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "CapsuleNet", "CapsuleNet\CapsuleNet.pyproj", "{2CFC421F-8FE6-4B1F-9C08-E0DB2F333411}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,6 +27,8 @@ Global
 		{55529126-904C-4E7D-8398-0FF6D7C19B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A74CD203-E92F-4BCF-B77A-1630A9234915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A74CD203-E92F-4BCF-B77A-1630A9234915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFC421F-8FE6-4B1F-9C08-E0DB2F333411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFC421F-8FE6-4B1F-9C08-E0DB2F333411}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
